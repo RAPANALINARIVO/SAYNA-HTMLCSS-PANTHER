@@ -750,18 +750,28 @@ footer {
     grid-area: footer-text;
 }
 
-/* La responsivité  */
+/* @media  responsivité  */
 
 /* Pour la page d'acceuil */
 @media  (max-width: 1000px) {
-    .slider-text {margin-top: 0;}
-    #monger img {margin-top: 0;}
-    /* Pour que le texte ne passe pas à la ligne */
+    .slider-text {margin-top: 70px; display: block;}
+    .slider-text p{font-size: 20px;}
+    #arrow{display: none;}
+    #monger img {margin-top: 10px;width: fit-content;}
     .heros a{white-space: nowrap;}
     .parent-container{display: block; margin: 0 auto;}
     .left-part{margin-bottom: 30%;}
     .right-part div{margin: 0 auto}
     #s-pic {margin-left: 20vw;}
+    .slider-container{
+                    display: flex;
+                    flex-direction:row;
+                    flex-flow: wrap; 
+                    justify-content: center;
+                    align-items: center;
+
+                    }
+    .slider-container .slider-pic{width: fit-content;}
 }
 
 @media (max-width: 800px) {
@@ -771,7 +781,7 @@ footer {
     .left-part {margin-bottom: 15em;}
     .right-part p {line-height: 1em;}
     .contact-container form {width: 90%; padding: 2em;}
-    /* Pour tous les footer */
+    /* ||Pour tous les footer */
     footer {width: 100%; padding: 1em 0; margin: 0 auto;}
     .footer-container {
         width: 90%;
@@ -831,7 +841,7 @@ footer {
     .footer-pic {padding: 1em}
   }
 
-  /* Pour la page Enigme */
+  /* ||Pour la page Enigme */
 
   @media (max-width: 1000px) {
     .hero-enigme {display: block; float: none; margin: 0 auto;}
@@ -867,7 +877,7 @@ footer {
     .question div{width: 150%; font-size: 17px;}
 }
 
-  /* Dans la page Wakanda */
+  /* || Dans la page Wakanda */
   @media (max-width: 800px) {
     .hero-container h1 {margin-top: 3em;}
     .hero-container .heros {width: 50%;}
