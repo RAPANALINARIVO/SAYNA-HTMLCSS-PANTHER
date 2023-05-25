@@ -1,0 +1,888 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* definition color */
+:root {
+    --pink01: #F2CEF2;
+    --purple01: #9E91B7;
+    --pink02: #DF99F2;
+    --purple02: #3D2DA6;
+    --bleue: #07338C;
+    --bleue2: #021740;
+}
+/* Annimation venant de la droite pour tous les éléments */
+html {
+    animation: body 1.5s ease-out forwards;
+}
+
+html {
+    animation: html 1.5s ease-in-out;
+}
+
+@keyframes html {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+}
+h1 {
+    font-family: "panthera";
+    font-size: 50px;
+    color: var(--purple01);
+    top: 0;
+}
+
+h2 {
+    font-family: "beyno";
+    color: var(--purple01);
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: "beyno";
+    color: var(--purple01);
+    line-height: 40px;
+}
+
+p {
+    font-family: "cantarell";
+    font-size: 0.7em;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2% auto;
+}
+
+nav .nav-logo img{
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Pour que les logos passe en viollet au passage de la souris */
+.nav-logo img:hover {
+    filter: invert(70%) sepia(20%) saturate(5) hue-rotate(270deg);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li{
+    margin: 10px;
+    color: white;
+}
+
+.nav-links a, .nav-links a:visited{
+    font-family: "beyno";
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links ul li .active{
+    text-decoration: underline;
+    color: var(--purple01);
+}
+
+/* Les fonts */
+@font-face {
+    font-family: 'beyno';
+    src: url('fonts/beyno/');
+    src: url('fonts/beyno/?#iefix') format('embedded-opentype'),
+         url('fonts/beyno/beyno-webfont.woff2') format('woff2'),
+         url('fonts/beyno/beyno-webfont.woff') format('woff'),
+         url('fonts/beyno/beyno-webfont.ttf') format('truetype'),
+         url('fonts/beyno/beyno-webfont.svg#beynoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'panthera';
+    src: url('fonts/black-panther/');
+    src: url('fonts/black-panther/?#iefix') format('embedded-opentype'),
+         url('fonts/black-panther/pantheraregular-mvz9j-webfont.woff2') format('woff2'),
+         url('fonts/black-panther/pantheraregular-mvz9j-webfont.woff') format('woff'),
+         url('fonts/black-panther/pantheraregular-mvz9j-webfont.ttf') format('truetype'),
+         url('fonts/black-panther/pantheraregular-mvz9j-webfont.svg#pantheraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cantarell';
+    src: url('fonts/cantarell/');
+    src: url('fonts/cantarell/?#iefix') format('embedded-opentype'),
+         url('fonts/cantarell/cantarell-regular-webfont.woff2') format('woff2'),
+         url('fonts/cantarell/cantarell-regular-webfont.woff') format('woff'),
+         url('fonts/cantarell/cantarell-regular-webfont.ttf') format('truetype'),
+         url('fonts/cantarell/cantarell-regular-webfont.svg#cantarellregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'wakanda_forever';
+    src: url('fonts/wakanda_forever/');
+    src: url('fonts/wakanda_forever/?#iefix') format('embedded-opentype'),
+         url('fonts/wakanda_forever/wakandaforever-regular-webfont.woff2') format('woff2'),
+         url('fonts/wakanda_forever/wakandaforever-regular-webfont.woff') format('woff'),
+         url('fonts/wakanda_forever/wakandaforever-regular-webfont.ttf') format('truetype'),
+         url('fonts/wakanda_forever/wakandaforever-regular-webfont.svg#wakanda_foreverregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* Mettre le même background à toutes les pages */
+body{
+    background: radial-gradient(126.67% 350.28% at -21.35% 0%,#11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%);
+    overflow-x: hidden;
+}
+
+/* Les icons statiques sur le côté */
+.container-icons {
+    position: sticky;
+    top: 0px;
+    margin-top: -150px;
+    margin-left: 20px;
+    writing-mode: vertical-lr;
+    overflow: hidden;
+    height: 350px;
+    cursor: pointer;
+}
+
+.icons-list{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 340px;
+    text-align: end;
+}
+
+.icons-list img{
+    width: 20px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Annimation sur les icons */
+.icons-list img:hover{
+    filter: invert(0%) sepia(100%) saturate(0);
+}
+
+#hr1 {
+    border: 2px solid var(--purple01);
+}
+
+#hr2 {
+    color: var(--purple01);
+    border: 2px solid var(--purple01);
+    margin-top: -10px;
+    margin-left: 8px;
+    float: left;
+    height: 60%;
+}
+
+/* Les class hero dans les différentes pages */
+
+/* || Dans la page d'accueil */
+.hero-home {
+    background-image: url("illustrations_logo/Accueil/Pantherhome1..png");
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 96%;
+    height: 500px;
+    margin-top: -220px;
+}
+
+#hero-home-text {
+    width: 23em;
+}
+
+.hero-home a,.slider-container a, .hero-container a{
+    color: #ffffff;
+    font-size: 0.7em;
+    font-family: "cantarell";
+}
+
+/* || Dans Wakanda */
+.hero-container {
+    width: 100%;
+    height: 800px;
+    background-image: url("illustrations_logo/Wakanda/Pantherwakanda1.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -4em;
+}
+
+.hero-container .heros{
+    width: 30%;
+    text-align: justify;
+    margin-left: -1em;
+}
+
+.hero-container h1{
+    font-family: "beyno";
+    color: var(--purple01);
+    line-height: 40px;
+    font-size: 40px;
+    letter-spacing: 4px;
+    width: 500px;
+    margin-top: 150px;
+}
+
+.hero-container h2 {
+    font-family: "wakanda_forever";
+    letter-spacing: 10px;
+}
+
+/* || Dans Enigme */
+.hero-container-enigme {
+    width: 90%;
+    background-image: url("illustrations_logo/Enigme/Pantherenigme1.png");
+    background-position: top left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 800px;
+    margin-top: -10em;
+}
+
+.heros {
+    width: 30%;
+    height: auto;
+    color: white;
+    padding-left: 13%;
+    padding-top: 10%;
+}
+
+.hero-enigme {
+    float: right;
+    width: 35%;
+    height: auto;
+    color: white;
+    padding-top: 25%;
+    margin-right: 5em;
+}
+
+.hero-enigme h1{
+    font-family: "beyno";
+    color: var(--purple01);
+    line-height: 40px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    text-align: justify;
+    padding: 5px;
+}
+
+.hero-text-enigme {
+    margin-top: 40px;
+    width: 30%;
+    text-align: justify;    
+    margin-top: 200px;
+    margin-left: 300px;
+}
+
+.hero-text-enigme p{
+    margin-top: 20px;
+}
+
+.hero-text-enigme, .hero-enigme #hero-pic1 {    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-enigme #hero-pic1 {
+    width: 600px;
+}
+
+.hero-enigme #hero-pic2 {
+    width: 700px;
+    position: absolute;
+    margin-top: 100px;
+}
+
+/* || Les sections dans Accueil*/
+.slider-container {
+    width: 90%;
+    display: flex;
+    margin-left: 10%;
+    background-color: var(--bleue2);
+}
+
+.slider-text{
+    margin-top: 20px;
+    padding: 1em;
+}
+
+.slider-text p{
+    text-align: justify;
+    height: auto;
+    overflow: auto;
+}
+
+
+#monger{
+    position: relative;
+    margin-bottom: -70px;
+    align-items: center;
+}
+
+#monger img{
+    width: auto;   
+    height: 20em;
+    margin-top: -2em;
+    margin-left: 1.5em;
+}
+
+.slider-pic{
+    width: auto;
+    height: 250px;
+}
+
+/* La petite flèche pour le slider */
+#arrow {
+    width: 200px;
+    position: absolute;
+    right: -80px;
+    top: 570px;
+    cursor: pointer;
+}
+
+.parent-container {
+    display: grid;
+    width: 80%;
+    margin: 10% auto;
+    grid-template-columns: 2fr 1fr;
+    gap: 10%;
+}
+
+.left-part{
+    text-align: justify;
+}
+
+.right-part div{
+    background-color: rgba(255, 255, 255, 0.863);
+    font-family: "cantarell";
+    border-radius: 5px;
+    text-align: justify;
+    width: 270px;
+    height: 480px;
+    padding: 50px;
+    margin-top: 150px;
+}
+
+.right-part label{
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+}
+
+#f-pic {
+    width: 300px;
+    height: auto;
+    float: inline-start;
+    position: relative;
+    margin-top: -230px;
+    left: -15px;
+}
+
+.right-part p{
+    color: var(--bleue2);
+    line-height: 12px;
+}
+
+.right-part span{
+    font-weight: bold;
+}
+
+.right-part button{
+    display: inline-flex;
+    margin-left: 1.2em;
+    font-size: 10px;
+    padding: 8px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: var(--purple02);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+#s-pic {
+    width: 300px;
+    height: auto;
+    margin: 2em 0em 0em 3em;
+}
+
+/* La section contact */
+.contact-container {
+    height: 750px;
+    background-image: url('Illustrations_Logo/Accueil/Pantherhome7.png');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact-container form{
+    width: 35%;
+    height: auto;
+    padding: 3em 7em 3em 7em;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.137));
+    border-radius: 150px;
+    position: relative;
+    top: 100px;
+}
+
+.contact-container form p{
+    color: black;
+    text-align: center;
+}
+.contact-container form p+p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contact-container form input,.contact-container form textarea {
+    background: transparent;
+    color: black;
+}
+
+.contact-container form input,.contact-container form button,.contact-container form textarea{
+    display: block;
+    line-height: 30px;
+    margin: 0 auto;
+}
+
+.contact-container form input {
+    height: 10px;
+}
+
+.contact-container form input::placeholder,.contact-container form textarea::placeholder {
+    color: black;
+}
+
+.contact-container form input,textarea{
+    width: 20vw;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 40px;
+    padding: 1rem;
+    padding-left: 2rem;
+    border: 1px solid black;
+}
+
+.contact-container form button{
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 5px;
+    width: 120px;
+    background-color: var(--pink01);
+    border: none;
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 5px var(--pink01);
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-container form button:hover{
+    box-shadow: 0 0 20px var(--pink01);
+
+}
+/* || La fin des sections dans Accueil */
+
+/* || Les sections dans Wakanda */
+.parent-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+    margin: 0 auto;
+    text-align: justify;
+    background: url('Illustrations_Logo/Wakanda/Pantherwakanda2-mod.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.parent-container iframe{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.parent-container div {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.parent-container div img {
+    margin-top: 1em;
+    width: 100%;
+}
+
+/* ||La fin des section dans Wakanda */
+
+/* ||Les sections dans Enigme */
+
+.text-container-enigme {
+    width: 70%;
+    margin: 5% auto;
+    display: grid;
+    grid-template-areas: 
+        "text text"
+        "alpha paragraphe";
+    gap: 1em;
+    margin-bottom: 100px;
+}
+
+.text-container-enigme h3{
+    grid-area: text;
+    font-family: "wakanda_forever";
+    letter-spacing: 7px;
+    line-height: 30px;
+    margin-bottom: 2em;
+}
+
+.text-container-enigme p .word {
+    font-family: "wakanda_forever";
+}
+
+form {
+    margin-top: 150px;
+}
+
+.text-container-enigme input {
+    width: 75%;
+    padding: 7px 7px 7px 25px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid var(--pink01);
+    color: var(--pink01);
+}
+
+.text-container-enigme input::placeholder {
+    font-size: 11px;
+    color: var(--pink01);
+}
+
+.text-container-enigme #btn{
+    width: 75%;
+    text-align: center;
+}
+
+.text-container-enigme button{
+    width: 120px;
+    padding: 9px;
+    border-radius: 50px;
+    background-color: var(--pink01);
+    font-size: 11px;
+    font-weight: bold;
+    transition: box-shadow 0.3s ease;
+    border: none;
+}
+
+.text-container-enigme button:hover{
+    box-shadow: 0 0 20px var(--pink01);
+}
+
+.question {
+    grid-area: paragraphe;
+    width: 30vw;
+    text-align: center;
+    margin-top: 5em;
+    margin-left: 5em;
+}
+
+.question div, .question div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+.question div p {
+    width: 100%;
+}
+
+.question div {
+    position: relative;
+    z-index: 1;
+    margin-top: -100px;
+}
+
+.question div img {
+    width: 550px;
+    margin-left: 15px;
+}
+
+.right-enigme{
+    grid-area: alpha;
+}
+
+/* ||Fin des sections dans Enigme */
+
+/* ||Le footer */
+footer {
+    width: 90%;
+    padding: 7em;
+    background-image: url('Illustrations_Logo/All_pages/back_footer.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-pic #bulle-footer, .footer-pic #logo-footer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-pic #bulle-footer {
+    width: 200px;
+}
+
+.footer-pic #logo-footer {
+    width: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container {
+    width: 95%;
+    display: grid;
+    grid-template-areas:
+          ". . footer-pic footer-links footer-socials"
+          ". . footer-pic footer-text footer-text";
+}
+
+.footer-pic {
+    grid-area: footer-pic; 
+    position: relative;
+    margin-right: 5em;
+    transition: all 0.5s ease-out; /* Animation de 0,5s avec un effet de transition doux */
+}
+  
+.footer-pic:hover {
+    transform: scale(1.1);
+}
+
+.footer-links {
+    grid-area: footer-links;
+    color: white;
+}
+
+.footer-links p{
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer-links ul li a{
+    line-height: 25px;
+    font-family: "cantarell";
+    cursor: pointer;
+    font-size: 11px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-socials {
+    grid-area: footer-socials;
+}
+
+.footer-socials p {
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.footer-socials img {
+    width: 30px;
+    margin-right: 20px;
+    transition: all 0.5s ease-out; /* Animation de 0,5s avec un effet de transition doux */
+}
+  
+.footer-socials img:hover {
+    transform: scale(1.1);
+}
+
+.footer-text {
+    margin-top: 80px;
+    grid-area: footer-text;
+}
+
+/* La responsivité  */
+
+/* Pour la page d'acceuil */
+@media  (max-width: 1000px) {
+    .slider-text {margin-top: 0;}
+    #monger img {margin-top: 0;}
+    /* Pour que le texte ne passe pas à la ligne */
+    .heros a{white-space: nowrap;}
+    .parent-container{display: block; margin: 0 auto;}
+    .left-part{margin-bottom: 30%;}
+    .right-part div{margin: 0 auto}
+    #s-pic {margin-left: 20vw;}
+}
+
+@media (max-width: 800px) {
+    .parent-container p{font-size: 19px;}
+    .hero-home {margin-bottom: 10%;}
+    .parent-container {display: block; margin: 0 auto;}
+    .left-part {margin-bottom: 15em;}
+    .right-part p {line-height: 1em;}
+    .contact-container form {width: 90%; padding: 2em;}
+    /* Pour tous les footer */
+    footer {width: 100%; padding: 1em 0; margin: 0 auto;}
+    .footer-container {
+        width: 90%;
+        margin: 2em auto;
+        display: grid;
+        grid-template-areas: 
+            "footer-image footer-links"
+            "footer-image footer-socials"
+            "footer-text footer-text";
+        gap: 10px;
+    }
+    .footer-pic { padding: 3em;}
+    .footer-pic #bulle-footer {width: 150px;}
+    .footer-pic #logo-footer {width: 70px;}
+    .footer-text p{ text-align: center;}
+}
+
+@media (max-width: 400px) {
+    .nav-logo img{visibility: hidden; position: absolute;}
+    .container-icons {margin-left: 10px;}
+    .icons-list {margin-left: 3px;}
+    .hero-home {margin-bottom: 10%;}
+    #hero-home-text p{font-size: 13px;}
+    .heros a{width: 150%; white-space: nowrap;}
+    #hr2 {margin-left: 5px;}
+    .section{padding: 0px 1em 0px 1em;}
+    .parent-container p{font-size: 16px;}
+    .heros img{visibility: hidden;}
+    .hero-home {background-image: none;}
+    .heros {background-image: none; width: 10%; height: auto;}
+    #hero-home-text p{padding-right: 10em;}
+    #arrow {top: 600px}
+    .parent-container {display: block; margin: 0 auto;}
+    .left-part {margin-bottom: 15em;}
+    .right-part div {width: 150px; height: 600px; margin: 50% auto;}
+    .right-part div #f-pic {width: 180px;}
+    .right-part #s-pic {padding: 0; margin: 0;}
+    /* Pour tous les footer */
+    .contact-container form {width: 40%; padding: 5em;}
+    footer {width: 100%; padding: 1em 0 1em 0; margin: 0 auto;}
+    .footer-container {width: 90%; margin: 3em auto; display: grid; grid-template-areas:
+              "footer-image footer-links "
+              "footer-image footer-socials"
+              "footer-text footer-text"; gap: 10px;
+    }
+    .footer-pic {margin-right: 0px;}
+  }
+
+  @media  (max-width: 300px) {
+    .container-icons {margin-left: 5px;}
+    #hr2 {margin-left: 5px;}
+    #hero-home-text p {padding-right: 15em;}
+    .right-part div {padding: 30px;}
+    /* Pour tous les footer */
+    .contact-container form {width: 40%; padding: 5em;}
+    
+    .footer-pic {padding: 1em}
+  }
+
+  /* Pour la page Enigme */
+
+  @media (max-width: 1000px) {
+    .hero-enigme {display: block; float: none; margin: 0 auto;}
+    .hero-enigme h1{text-align: center; margin: 0 auto; text-shadow: 1px 1px 1px  rgb(0, 0, 0);}
+    .hero-text-enigme {margin: 20% 0 0 0;}
+    .hero-text-enigme #hero-pic2 {visibility: hidden;}
+  }
+
+  
+  @media (max-width: 700px) {
+    .hero-text-enigme {margin-top: 20%; font-size: 13px; margin-bottom: 150%;}
+    .hero-enigme h1 {margin-top: 150px; width: 170%; margin-bottom: 20%;}
+    form {margin-top: 2em;}
+    .text-container-enigme { grid-template-areas:
+                        "text text"
+                        "alpha alpha" 
+                        "paragraphe paragraphe";} 
+    .question {margin-top: 200px;}
+    .question div{width: 150%; font-size: 17px;}
+    }  
+    
+@media (max-width: 400px) {
+    .hero-enigme {background-image: none;}
+    .div-hero-enigme div{width: 90%;}
+    form {margin-top: 2em;}
+    .text-container-enigme { grid-template-areas:
+                        "text text"
+                        "alpha alpha" 
+                        "paragraphe paragraphe";}
+                         
+    .text-container-enigme {margin-top: 90%;}
+    .question {margin-top: 250px;}
+    .question div{width: 150%; font-size: 17px;}
+}
+
+  /* Dans la page Wakanda */
+  @media (max-width: 800px) {
+    .hero-container h1 {margin-top: 3em;}
+    .hero-container .heros {width: 50%;}
+  } 
+  
+  @media (max-width: 600px) {
+    .hero-container h1 {width: auto;}
+    .hero-container .heros {width: 60%;}
+    .parent-container  {display: block;}
+  }
+
+  @media (max-width: 400px) {
+    .hero-container h1 {width: auto;}
+    .hero-container .div-hero {width: 70%;}
+    .parent-container  {display: block;}
+  }
+
+  
